@@ -21,7 +21,7 @@ pca = PCA(n_components=4)
 X_r = pca.fit(X).transform(X)
 pipe = Pipeline([('scaler', StandardScaler()), ('pca', pca)])
 
-#Create the Scree Plot and calculate amount of varience explained by each principal component#
+#Create the Scree Plot and calculate amount of variance explained by each principal component#
 PC_values = np.arange(pca.n_components_) + 1
 plt.plot(PC_values, pca.explained_variance_ratio_)
 plt.style.use('seaborn-notebook')
@@ -34,7 +34,7 @@ matplotlib.pyplot.savefig('screeplot.png')
 
 #How much variance is explained by X number of principal components?#
 print(pca.explained_variance_ratio_)
-#the result of this is printed in the terminal - fromt his, we know that two PC are more than adequate to represent this data set.#
+#the result of this is printed in the terminal - from this, we know that two PC are more than adequate to represent this data set.#
 
 #Plot PCA - show first two components#
 plt.figure(figsize=(8,6))
