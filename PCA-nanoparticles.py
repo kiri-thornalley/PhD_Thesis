@@ -29,13 +29,6 @@ finalDf = pd.concat([principalDf, df[['VAD_type','Lumen_number','Infusion_Fluid'
 #Create the Scree Plot and calculate amount of variance explained by each principal component#
 PC_values = np.arange(pca.n_components_) + 1
 fig = plt.figure(figsize=(8, 8))
-ax = fig.add_axes([1, 1, 1, 1])
-ax.xaxis.set_major_locator(MultipleLocator(1.000))
-ax.xaxis.set_minor_locator(AutoMinorLocator(1))
-ax.set_xlim(1, 4)
-ax.tick_params(which='major', width=1.0, length=10, labelsize=14)
-ax.tick_params(which='minor', width=1.0, length=5, labelsize=10,
-               labelcolor='0.25')
 plt.plot(PC_values, pca.explained_variance_ratio_)
 plt.title('Scree Plot')
 

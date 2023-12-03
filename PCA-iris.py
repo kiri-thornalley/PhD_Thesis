@@ -14,7 +14,7 @@ y = iris.target
 target_names = iris.target_names
 
 #Print the data set - lets us check we've imported the correct thing#
-#print (iris)#
+print (iris)#
 
 #Run PCA#
 pca = PCA(n_components=4)
