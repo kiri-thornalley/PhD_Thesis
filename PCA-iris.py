@@ -14,7 +14,7 @@ y = iris.target
 target_names = iris.target_names
 
 #Print the data set - lets us check we've imported the correct thing#
-print (iris)#
+#print (iris)#
 
 #Run PCA#
 pca = PCA(n_components=4)
@@ -27,7 +27,9 @@ plt.plot(PC_values, pca.explained_variance_ratio_)
 plt.style.use('seaborn-notebook')
 plt.title('Scree Plot')
 plt.xlabel('Principal Component')
+plt.xticks(PC_values)
 plt.ylabel('Variance Explained')
+plt.ylim(0,1)
 plt.show()
 #Automatically save the plot this generates - matplotlib currently running a non-GUI backend so cannot visualise the plot#
 matplotlib.pyplot.savefig('screeplot.png')
